@@ -77,7 +77,7 @@ impl<'a> Enrollment<'a> {
     }
 }
 
-// generic function using a trait bound
+// generic function/ trait bound
 fn print_any_info<T: ShowInfo>(item: &T) {
     println!("Generic Info: {}", item.show_info());
 }
