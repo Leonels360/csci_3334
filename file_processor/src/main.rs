@@ -119,7 +119,7 @@ fn analyze_file(path: &PathBuf) -> FileAnalysis {
 
 fn main() {
     println!("\n");
-    println!("------Parallel File Processor------");
+    println!("------File Processor------");
     println!("\n");
 
     let num_threads = 4;
@@ -220,7 +220,7 @@ fn main() {
 //might still have soem error handling issues
 
 /*had issues
-// Compute statistics 
+/
 fn compute_stats(path: &PathBuf) -> std::io::Result<FileStats> {
     let mut file = fs::File::open(path)?;
     let metadata = file.metadata()?;
@@ -230,15 +230,5 @@ fn compute_stats(path: &PathBuf) -> std::io::Result<FileStats> {
     let line_count = contents.lines().count();
     let word_count = contents.count();
 
-    let mut char_frequencies = HashMap::new();
-    for ch in contents.chars() {
-        *char_frequencies.entry(ch).or_insert(0) += 1;
-    }
-    Ok(FileStats {
-        word_count,
-        line_count,
-        char_frequencies,
-        size_bytes,
-    })
 }
 */
